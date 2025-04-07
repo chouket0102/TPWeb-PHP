@@ -1,4 +1,5 @@
 <?php
+include_once 'autoloader.php';
 require_once 'connexionDB.php';
 
 
@@ -14,7 +15,7 @@ function createDatabase() {
 
 }
 
-// Fonction pour créer la table des étudiants
+
 function createStudentTable() {
 
     $db = ConnexionDB::getInstance();
@@ -52,6 +53,15 @@ function getAllStudents() {
 
     $db = ConnexionDB::getInstance();
     $sql = $db->query("SELECT * FROM student");
-    return $sql->fetchAll(PDO::FETCH_ASSOC);
+    return $sql->fetchAll(PDO::FETCH_OBJ);
+}
+
+
+function getStudentById($id) {
+    $db = ConnexionDB::getInstance();
+    $sql = $db->prepare("SELECT * FROM student WHERE id = :id");
+    $sql->bindParam(':id', $id, PDO::PARAM_INT);
+    $sql->execute();
+    return $sql->fetch(PDO::FETCH_OBJ);
 }
 ?>
