@@ -12,7 +12,7 @@ This Student Management System provides an intuitive interface for administrator
 - **Student Management**: Add, view, update, and delete student records  
 - **Section Management**: Create and manage course sections  
 - **Export Functionality**: Export data to PDF and CSV formats  
-- **Responsive Design**: Bootstrap-based UI for desktop and mobile devices  
+ 
 
 ---
 
