@@ -21,5 +21,9 @@ class PokemonFeu extends Pokemon {
                 return 1.0; 
         }
     }
+
+    public function getType(){
+        return "Feu";
+    }
 }
 ?>

@@ -1,12 +1,9 @@
 <?php
 include_once "./class/Pokemon.php";
-echo "loaded successfully";
 include_once "./class/PokemonEau.php";
-echo "loaded successfully";
 include_once "./class/PokemonFeu.php";
-echo "loaded successfully";
 include_once "./class/PokemonPlante.php";
-echo "loaded successfully";
+
 include 'includes/header.php';
 session_start();
 

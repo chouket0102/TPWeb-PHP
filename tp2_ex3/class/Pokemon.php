@@ -12,7 +12,7 @@ class Pokemon {
         $this->url= $url;
         $this->hp= $hp;
         $this->attackPokemon= $attackPokemon;
-        $this->type= "Normal";
+        $this->type= $type;
 
     }
 

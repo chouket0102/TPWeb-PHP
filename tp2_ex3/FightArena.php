@@ -1,13 +1,9 @@
 <?php
-
 include_once __DIR__ . "/class/Pokemon.php";
 include_once __DIR__ . "/class/PokemonEau.php";
 include_once __DIR__ . "/class/PokemonFeu.php";
 include_once __DIR__ . "/class/PokemonPlante.php";
 session_start();
-
-
-
 
 if (!isset($_SESSION['round'])) {
     $_SESSION['round'] = 1;
@@ -18,6 +14,19 @@ if (!isset($_SESSION['round'])) {
     .image {
         height: 300px;
         width: 300px;
+    }
+    .round-display {
+        background-color: #ffcccb;
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .damage-info {
+        background-color: #e9ecef;
+        padding: 5px;
+        margin: 5px 0;
+        border-radius: 4px;
     }
 </style>
 
@@ -90,16 +99,27 @@ if (!isset($_SESSION['round'])) {
                 Special attack probability: <?php  echo $_SESSION['choice2']->getAttackPokemon()->getProbabilitySpecialAttack(); ?>
             </div>
         </div>
+        
+        <?php if (isset($_SESSION['DamageDoneToChoice1']) && isset($_SESSION['DamageDoneToChoice2'])): ?>
+        <!-- Round display section -->
+        <div class="row">
+            <div class="col-12 round-display">
+                <h4 class="text-danger">Round <?php echo ($_SESSION['round'] - 1); ?></h4>
+                <div class="row">
+                    <div class="col-6 damage-info">
+                        <?php echo $_SESSION['DamageDoneToChoice2']; ?>
+                    </div>
+                    <div class="col-6 damage-info">
+                        <?php echo $_SESSION['DamageDoneToChoice1']; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
+        
         <a href="./combat.php">
             <button type="button" class="btn btn-secondary">
-                <?php
-                if (isset($_SESSION['FinalRound'])) {
-                    echo "Winner";
-                    $_SESSION['winner'] = $_SESSION['FinalRound'];
-                } else {
-                    echo "Round ", $_SESSION['round'];
-                }
-                ?>
+                <?php echo "Round " . $_SESSION['round']; ?>
             </button>
         </a>
         <a href="./ResetFight.php">
