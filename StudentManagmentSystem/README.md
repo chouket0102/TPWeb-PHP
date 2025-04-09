@@ -118,14 +118,14 @@ Update the database credentials in `config/database.php` with your MySQL details
 
 - Navigate to the **Sections** module to:
   - View, add, edit, or delete course sections
-  - Export section data to **PDF** or **CSV** formats
+  - Export section data to **PDF** or **CSV** or **Excel** formats
 
 ### 👨‍🎓 Managing Students
 
 - Navigate to the **Students** module to:
   - View, add, edit, or delete student records
   - Assign students to specific sections
-  - Export student data to **PDF** or **CSV** formats
+  - Export student data to **PDF** or **CSV** or **Excel** formats
 
 ---
 
