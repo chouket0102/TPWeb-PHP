@@ -6,7 +6,7 @@ $pdo = getDBConnection();
 $username = 'yasserchouket';
 $email = 'yasserchouket2101@gmail.com';
 $plain_password = 'bor3i123';
-$role = 'admin';
+$role = 'user';
 
 $hashed_password = password_hash($plain_password, PASSWORD_DEFAULT);
 
@@ -17,4 +17,4 @@ $stmt = $pdo->prepare("
 ");
 $stmt->execute([$username, $email, $hashed_password, $role]);
 
-echo "Admin créé avec succès !";
+echo "User créé avec succès !";
