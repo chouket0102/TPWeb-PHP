@@ -101,7 +101,7 @@ if (!isset($_SESSION['round'])) {
         </div>
         
         <?php if (isset($_SESSION['DamageDoneToChoice1']) && isset($_SESSION['DamageDoneToChoice2'])): ?>
-        <!-- Round display section -->
+        
         <div class="row">
             <div class="col-12 round-display">
                 <h4 class="text-danger">Round <?php echo ($_SESSION['round'] - 1); ?></h4>
