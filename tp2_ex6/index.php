@@ -27,7 +27,7 @@ echo "<br>";
 
 $newUserId = $userRepo->create([
     "username" => "youssef", 
-    "email" => "youssef@gmail.ucar.tn", 
+    "email" => "youssef@gmail.com", 
     "password" => "na3ne3", 
     "role" => "admin"
 ]);
