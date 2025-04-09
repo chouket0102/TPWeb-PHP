@@ -3,7 +3,7 @@ function getDBConnection() {
     $host = 'localhost';
     $dbname = 'university';
     $user = 'root';
-    $pass = 'toukebri0102#';
+    $pass = '';
     $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
